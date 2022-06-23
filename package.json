@@ -12,6 +12,7 @@
   "devDependencies": {
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.204",
-    "cpy-cli": "^4.1.0"
+    "cpy-cli": "^4.1.0",
+    "local-web-server": "^5.2.1"
   }
 }
