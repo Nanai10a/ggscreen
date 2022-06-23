@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "build": "run-p build:*",
-    "build:css": "tailwindcss -i src.css -o dist/index.css -w",
+    "build:css": "tailwindcss -i src.css --content src.html -o dist/index.css",
     "build:js": "spack --target browser",
     "build:html": "cpy src.html dist/index.html",
     "dev": "run-p dev:*",
