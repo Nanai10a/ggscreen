@@ -1,1 +1,3 @@
-console.log("hi, from console...");
+document.getElementById("ichiyo").addEventListener("animationend", () => {
+  window.location.reload();
+});

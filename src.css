@@ -1,3 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "M PLUS 1p", sans-serif;
+    @apply text-center;
+  }
+}
+
+@layer utilities {
+  @keyframes background {
+    from {
+      @apply bg-slate-900;
+    }
+    to {
+      @apply bg-slate-100;
+    }
+  }
+
+  #background {
+    @apply w-screen h-screen;
+    @apply bg-slate-900;
+    animation: background 0.5s 2s forwards;
+  }
+
+  @keyframes logo-genkai {
+    from {
+      @apply blur-none;
+    }
+    to {
+      @apply blur;
+    }
+  }
+
+  @keyframes logo-genkai-hide {
+    from {
+      @apply opacity-100 text-6xl;
+    }
+    50% {
+      @apply opacity-0 text-6xl;
+    }
+    to {
+      @apply opacity-0 text-[0];
+    }
+  }
+
+  #logo-genkai {
+    @apply fixed top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4;
+    @apply text-slate-900 text-6xl;
+    animation-name: logo-genkai, logo-genkai-hide;
+    animation-duration: 1s;
+    animation-delay: 4s, 7s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes aka-show {
+    from {
+      @apply opacity-0;
+    }
+    to {
+      @apply opacity-100;
+    }
+  }
+
+  @keyframes aka-hide {
+    from {
+      @apply opacity-100 text-6xl;
+    }
+    25% {
+      @apply opacity-0 text-6xl;
+    }
+    to {
+      @apply opacity-0 text-[0];
+    }
+  }
+
+  #logo-container {
+    @apply fixed top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4;
+    @apply w-fit h-fit;
+  }
+
+  #aka {
+    @apply opacity-0 inline relative right-8;
+    @apply text-slate-900 text-6xl;
+    animation-name: aka-show, aka-hide;
+    animation-duration: 1s, 2s;
+    animation-delay: 4.5s, 8s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes logo-approvers {
+    from {
+      @apply text-[0] opacity-0;
+    }
+    75% {
+      @apply text-6xl opacity-0;
+    }
+    to {
+      @apply text-6xl opacity-100;
+    }
+  }
+
+  @keyframes logo-approvers-color {
+    from {
+      color: black;
+      text-shadow: none;
+      opacity: 0;
+    }
+    25%,
+    50% {
+      color: #80ccd3ff;
+      text-shadow: 0 0 0 #f4c746ff;
+      opacity: 100%;
+    }
+    to {
+      color: #80ccd3cc;
+      text-shadow: 8px 8px #f4c746cc;
+      opacity: 100%;
+    }
+  }
+
+  @keyframes logo-approvers-hide {
+    from {
+      @apply text-6xl opacity-100;
+    }
+    50% {
+      @apply text-6xl opacity-0;
+    }
+    to {
+      @apply text-[0] opacity-0;
+    }
+  }
+
+  #logo-approvers {
+    @apply opacity-0 inline;
+    @apply text-slate-900 text-[0];
+    animation-name: logo-approvers, logo-approvers-color, logo-approvers-hide;
+    animation-duration: 1s, 2s, 2s;
+    animation-delay: 6s, 8s, 10s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes description-hide {
+    from {
+      @apply opacity-100;
+    }
+    to {
+      @apply opacity-0;
+    }
+  }
+
+  #description-container {
+    @apply fixed top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4;
+    @apply w-fit h-fit;
+    animation: description-hide 1s 18s forwards;
+  }
+
+  @keyframes description-1 {
+    from {
+      @apply text-[0];
+    }
+    to {
+      @apply text-4xl;
+    }
+  }
+
+  #description-1 {
+    @apply text-slate-900 text-[0];
+    animation-name: description-1;
+    animation-duration: 1s;
+    animation-delay: 11s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes description-2 {
+    from {
+      @apply text-[0];
+    }
+    to {
+      @apply text-4xl;
+    }
+  }
+
+  #description-2 {
+    @apply text-slate-900 text-[0] text-center;
+    @apply w-fit h-fit;
+    animation-name: description-2;
+    animation-duration: 1s;
+    animation-delay: 13s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes d1 {
+    from {
+      @apply text-[0];
+    }
+    50% {
+      @apply text-4xl;
+    }
+    to {
+      @apply text-[0];
+    }
+  }
+  @keyframes d2 {
+    from {
+      @apply text-[0];
+    }
+    50% {
+      @apply text-4xl;
+    }
+    to {
+      @apply text-[0];
+    }
+  }
+  @keyframes d3 {
+    from {
+      @apply text-[0];
+    }
+    to {
+      @apply text-4xl;
+    }
+  }
+
+  #d1 {
+    @apply text-[0];
+    animation: d1 2s 14s forwards;
+  }
+  #d2 {
+    @apply text-[0];
+    animation: d2 2s 15s forwards;
+  }
+  #d3 {
+    @apply text-[0];
+    animation: d3 1s 16s forwards;
+  }
+
+  @keyframes certain {
+    from {
+      @apply top-[-100vh];
+    }
+    to {
+      @apply top-0;
+    }
+  }
+  #certain {
+    @apply absolute top-[-100vh] h-screen w-screen bg-slate-900;
+    animation: certain 2s 18s forwards;
+  }
+
+  @keyframes ichiyo-show {
+    from {
+      @apply opacity-0;
+    }
+    to {
+      @apply opacity-100;
+    }
+  }
+
+  @keyframes ichiyo-hide {
+    from {
+      @apply opacity-100;
+    }
+    to {
+      @apply opacity-0;
+    }
+  }
+
+  #ichiyo {
+    @apply fixed top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4;
+    @apply opacity-0;
+    clip-path: circle(50%);
+    animation-name: ichiyo-show, ichiyo-hide;
+    animation-duration: 2s, 1s;
+    animation-delay: 20s, 23s;
+    animation-fill-mode: forwards;
+  }
+}
