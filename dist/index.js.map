@@ -1,1 +1,0 @@
-{"version":3,"sources":["/home/nanai/Workspace/ggscreen/src.js"],"sourcesContent":["document.getElementById(\"ichiyo\").addEventListener(\"animationend\", () => {\n  window.location.reload();\n});\n"],"names":[],"mappings":"AAAA,QAAQ,CAAC,cAAc,CAAC,QAAQ,CAAC,CAAC,gBAAgB,CAAC,cAAc,EAAE,WAAM;IACvE,MAAM,CAAC,QAAQ,CAAC,MAAM,EAAE,CAAC;CAC1B,CAAC,CAAC"}
